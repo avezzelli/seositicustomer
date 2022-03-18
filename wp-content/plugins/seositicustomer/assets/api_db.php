@@ -69,9 +69,11 @@ function creaTabella($tabella, $param, $fks = null) {
     }
     $query .= ");{$charset_collate}";
 
+       
     try {
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta($query);
+       
         return true;
     } catch (Exception $ex) {
         _e($ex);

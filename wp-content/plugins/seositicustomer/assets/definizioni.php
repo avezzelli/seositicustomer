@@ -4,6 +4,7 @@ namespace seositi;
 
 /************************ DEFINIZIONI **************************/
 define('NAME_SPACE', 'seositi');
+define('DB_PREFIX', 'wp_seositi_');
 
 
 /************************ TABELLE DATABASE **************************/
@@ -53,3 +54,13 @@ define('DBT_SER_UPLOAD', 'upload');
 
 //Rinnovo
 define('DBT_RIN', 'rinnovi');
+
+
+/************************ OGGETTI **************************/
+define('OBJ_AMM', 'amministratore');
+define('OBJ_CLI', 'cliente');
+define('OBJ_COM', 'commerciale');
+define('OBJ_REP', 'report');
+define('OBJ_RIN', 'rinnovo');
+define('OBJ_SER', 'servizio');
+define('OBJ_UG', 'utentegestionale');

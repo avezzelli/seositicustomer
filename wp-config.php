@@ -1,4 +1,10 @@
 <?php
+
+//Begin Really Simple SSL session cookie settings
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+//END Really Simple SSL
 /**
  * Il file base di configurazione di WordPress.
  *
@@ -78,7 +84,8 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
 
 /* Finito, interrompere le modifiche! Buon blogging. */
 

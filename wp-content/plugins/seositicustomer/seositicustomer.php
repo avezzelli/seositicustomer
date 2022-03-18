@@ -16,9 +16,13 @@
 //includo le librerie
 require_once 'assets/definizioni.php';
 require_once 'assets/api_db.php';
-
+require_once 'assets/interfaces/interfaces.php';
+require_once 'assets/classes/classes.php';
 require_once 'assets/initialize_DB.php';
+
 require_once 'assets/functions.php';
+
+
 
 define('PATH_SEOSITI', plugin_dir_path(__FILE__));
 

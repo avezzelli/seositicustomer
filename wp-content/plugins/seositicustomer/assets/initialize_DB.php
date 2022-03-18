@@ -4,11 +4,6 @@ namespace seositi;
 
 /*** CREAZIONE DATABASE ***/
 function install_seositi_db(){
-    
-}
-
-/*** ELIMINAZIONE DATABASE ***/
-function delete_seositi_db(){
     try{
         //UTENTE GESTIONALE
         $args = array(
@@ -179,7 +174,7 @@ function delete_seositi_db(){
         );
         $fks = array(
             array(
-                'ke1'       => DBT_ID_CLIENTE,
+                'key1'      => DBT_ID_CLIENTE,
                 'tabella'   => DBT_CLI
             )
         );
@@ -199,11 +194,22 @@ function delete_seositi_db(){
                 'tabella'   => DBT_SER
             )
         );
-        creaTabella(DBT_RIN, $args, $fks);
+       creaTabella(DBT_RIN, $args, $fks);
         
         
     } catch (Exception $ex) {
         _e($ex);
         return false; 
     }
+}
+
+/*** ELIMINAZIONE DATABASE ***/
+function delete_seositi_db(){
+    dropTabella(DBT_RIN);
+    dropTabella(DBT_SER);
+    dropTabella(DBT_REP);
+    dropTabella(DBT_AMM);
+    dropTabella(DBT_COM);
+    dropTabella(DBT_CLI);
+    dropTabella(DBT_UG);
 }
