@@ -204,6 +204,6 @@ function delete_seositi_db(){
         
     } catch (Exception $ex) {
         _e($ex);
-        return false;
+        return false; 
     }
 }
