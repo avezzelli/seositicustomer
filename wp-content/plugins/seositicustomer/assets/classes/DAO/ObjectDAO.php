@@ -2,10 +2,13 @@
 
 namespace seositi;
 
-class ObjectDAO {
+abstract class ObjectDAO {
 
     private $wpdb;
     private $table;
+        
+    abstract function updateToObj(MyObject $o);      
+    abstract function newObj();
 
     function __construct($table) {
 
@@ -192,7 +195,7 @@ class ObjectDAO {
      * @param type $ID
      * @return type
      */
-    protected function deleteObjectByID($ID) {
+    protected function deleteObjectByID($ID): bool {
         $array = array('ID' => $ID);
         return $this->deleteObject($array);
     }
@@ -219,7 +222,7 @@ class ObjectDAO {
             return null;
         }
     }
-
+        
     protected function getTable() {
         return $this->table;
     }

@@ -18,6 +18,11 @@ function curPageURL() {
     return $pageURL;
 }
 
+/**
+ * Controlla se il valore passato contiene risultati
+ * @param type $temp
+ * @return boolean
+ */
 function checkResult($temp){
     if($temp != null && count($temp) > 0){
         return true;
@@ -89,3 +94,17 @@ function updateToServizio(\seositi\MyObject $o): seositi\Servizio{
 function updateToUG(\seositi\MyObject $o): \seositi\UtenteGestionale{
     return updateTo(OBJ_UG, $o);
 }
+
+
+//INSERISCO FUNZIONI PERSONALIZZATE
+
+/**
+ * Devo ottenere la mail dell'utente WP conoscendo il suo ID. 
+ * @param int $id
+ * @return string
+ */
+function getEmailByWpId(int $id): string{
+    $user = get_userdata($id);
+    return $user->user_email;
+}
+

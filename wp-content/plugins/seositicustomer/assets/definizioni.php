@@ -5,6 +5,7 @@ namespace seositi;
 /************************ DEFINIZIONI **************************/
 define('NAME_SPACE', 'seositi');
 define('DB_PREFIX', 'wp_seositi_');
+define('ELEMENTI_PER_PAGINA', 10);
 
 
 /************************ TABELLE DATABASE **************************/

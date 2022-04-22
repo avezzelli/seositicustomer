@@ -2,7 +2,6 @@
 
 namespace seositi;
 
-
 class Commerciale extends UtenteGestionale {
     private int $idUG;
     

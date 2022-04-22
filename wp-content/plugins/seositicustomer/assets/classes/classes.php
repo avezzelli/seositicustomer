@@ -15,6 +15,7 @@ require_once 'model/Servizio.php';
 /** CLASSI DAO **/
 require_once 'DAO/ObjectDAO.php';
 require_once 'DAO/UtenteGestionaleDAO.php';
+require_once 'DAO/AmministratoreDAO.php';
 
 /** CLASSI CONTROL **/
 
