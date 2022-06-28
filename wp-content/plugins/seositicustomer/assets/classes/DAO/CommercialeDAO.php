@@ -10,11 +10,11 @@ class CommercialeDAO extends ObjectDAO implements InterfaceDAO {
         parent::__construct(DBT_COM);
     }
 
-    private function newObj(): Commerciale {
+    public function newObj(): Commerciale {
         return new Commerciale();
     }
     
-    private function updateToObj(MyObject $o): Commerciale {
+    public function updateToObj(MyObject $o): Commerciale {
         return updateToCommerciale($o);
     }
     

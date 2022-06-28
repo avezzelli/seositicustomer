@@ -170,6 +170,11 @@ function install_seositi_db(){
                 'nome'  => DBT_ID_CLIENTE,
                 'tipo'  => 'INT',
                 'null'  => 'NOT NULL'
+            ),
+            array(
+                'nome'  => DBT_SER_NOME,
+                'tipo'  => 'TEXT',
+                'null'  => null
             )
         );
         $fks = array(

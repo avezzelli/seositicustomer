@@ -8,11 +8,11 @@ class UtenteGestionaleDAO extends ObjectDAO implements InterfaceDAO {
         parent::__construct(DBT_UG);
     }
 
-    private function newObj(): UtenteGestionale {
+    public function newObj(): UtenteGestionale {
         return new UtenteGestionale();
     }
     
-    private function updateToObj(MyObject $o): UtenteGestionale{
+    public function updateToObj(MyObject $o): UtenteGestionale{
         return updateToUG($o);
     }
     

@@ -9,6 +9,7 @@ class Servizio extends MyObject{
     private float $prezzo;
     private string $upload;
     private int $idCliente;
+    private string $nome;
     
     public function __construct() {
         parent::__construct();
@@ -69,6 +70,13 @@ class Servizio extends MyObject{
     public function setIdCliente(int $idCliente): void {
         $this->idCliente = $idCliente;
     }
+    
+    public function getNome(): string {
+        return $this->nome;
+    }
 
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
+    }
 
 }

@@ -9,15 +9,15 @@ class AmministratoreDAO extends ObjectDAO implements InterfaceDAO{
         parent::__construct(DBT_AMM);
     }
     
-    private function newObj(): Amministratore {
+    public function newObj(): Amministratore {
         return new Amministratore();
     }
 
-    private function updateToObj(MyObject $o): Amministratore {
+    public function updateToObj(MyObject $o): Amministratore {
         return updateToAmministratore($o);
     }
     
-    public function deleteByID($ID){
+    public function deleteByID($ID): bool{
         return parent::deleteObjectByID($ID);
     }
     
