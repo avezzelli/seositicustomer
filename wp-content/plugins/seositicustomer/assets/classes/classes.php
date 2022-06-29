@@ -16,6 +16,11 @@ require_once 'model/Servizio.php';
 require_once 'DAO/ObjectDAO.php';
 require_once 'DAO/UtenteGestionaleDAO.php';
 require_once 'DAO/AmministratoreDAO.php';
+require_once 'DAO/CommercialeDAO.php';
+require_once 'DAO/ClienteDAO.php';
+require_once 'DAO/ReportDAO.php';
+require_once 'DAO/ServizioDAO.php';
+require_once 'DAO/RinnovoDAO.php';
 
 /** CLASSI CONTROL **/
 
