@@ -5,6 +5,10 @@ namespace seositi;
 
 class ServizioDAO extends ObjectDAO implements InterfaceDAO {
     
+    public function __construct() {
+        parent::__construct(DBT_SER);
+    }
+    
     public function deleteByID($ID): bool {
         return parent::deleteObjectByID($ID);
     }
@@ -37,7 +41,8 @@ class ServizioDAO extends ObjectDAO implements InterfaceDAO {
             DBT_SER_PREZZO      => $obj->getPrezzo(),
             DBT_SER_UPLOAD      => $obj->getUpload(),
             DBT_ID_CLIENTE      => $obj->getIdCliente(),
-            DBT_SER_NOME        => $obj->getNome()
+            DBT_SER_NOME        => $obj->getNome(),
+            DBT_SER_RINNOVO     => $obj->getRinnovo()
         );
     }
 
@@ -53,7 +58,7 @@ class ServizioDAO extends ObjectDAO implements InterfaceDAO {
     }
 
     public function getFomato() {
-        return array('%d', '%s', '%s', '%f', '%s', '%d', '%s');
+        return array('%d', '%s', '%s', '%f', '%s', '%d', '%s', '%d');
     }
 
     public function getObj($item): Servizio {
@@ -65,6 +70,7 @@ class ServizioDAO extends ObjectDAO implements InterfaceDAO {
         $obj->setUpload($item[DBT_SER_UPLOAD]);
         $obj->setIdCliente($item[DBT_ID_CLIENTE]);
         $obj->setNome($item[DBT_SER_NOME]);
+        $obj->setRinnovo($inte[DBT_SER_RINNOVO]);
     }
 
     public function getResults($where = null, $offset = null) {

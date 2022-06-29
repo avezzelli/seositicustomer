@@ -10,6 +10,7 @@ class Servizio extends MyObject{
     private string $upload;
     private int $idCliente;
     private string $nome;
+    private int $rinnovo;
     
     public function __construct() {
         parent::__construct();
@@ -77,6 +78,14 @@ class Servizio extends MyObject{
 
     public function setNome(string $nome): void {
         $this->nome = $nome;
+    }
+    
+    public function getRinnovo(): int {
+        return $this->rinnovo;
+    }
+
+    public function setRinnovo(int $rinnovo): void {
+        $this->rinnovo = $rinnovo;
     }
 
 }

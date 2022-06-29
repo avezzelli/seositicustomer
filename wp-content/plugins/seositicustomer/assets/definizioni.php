@@ -53,6 +53,7 @@ define('DBT_SER_PREZZO', 'prezzo');
 define('DBT_SER_NOTE', 'note');
 define('DBT_SER_UPLOAD', 'upload');
 define('DBT_SER_NOME', 'nome');
+define('DBT_SER_RINNOVO', 'rinnovo');
 
 //Rinnovo
 define('DBT_RIN', 'rinnovi');
